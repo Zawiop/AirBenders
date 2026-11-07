@@ -1,0 +1,74 @@
+H1 leak share of failures by source (Wilson 95% CI)
+  Fac 2 + Sup B  n=  248 leaks= 142 share=0.573 [0.510, 0.633]
+  Fac 2 only     n=  536 leaks= 290 share=0.541 [0.499, 0.583]
+  Neither        n= 1570 leaks=   0 share=0.000 [0.000, 0.002]
+  Sup B only     n=  646 leaks= 356 share=0.551 [0.513, 0.589]
+  Fisher Fac 2 only vs Neither: p=1.41e-206
+  Fisher Sup B only vs Neither: p=9.16e-232
+  Fisher Fac 2 + Sup B vs Neither: p=1.78e-143
+  Among exposed groups, do shares differ? chi2=0.68 p=0.711 (no: one source is enough, both do not stack)
+  Leak share by facility x supplier
+supplier    Supplier A  Supplier B  Supplier C
+facility                                      
+Facility 1        0.00       0.557       0.000
+Facility 2        0.58       0.573       0.504
+Facility 3        0.00       0.528       0.000
+Facility 4        0.00       0.568       0.000
+  Leak subtype mix differs by source? chi2=5.72 p=0.221
+
+H2 controls share of failures by controls revision
+  Rev A: n=894 controls=283 share=0.317 [0.287, 0.348]
+  Rev B: n=1041 controls=0 share=0.000 [0.000, 0.004]
+  Rev C: n=1065 controls=0 share=0.000 [0.000, 0.004]
+  Fisher Rev A vs Rev B/C: p=2.21e-165
+  Rev A share of units by month (still being built?): min    0.24, max    0.34
+
+H3 fan rotation share of failures by shift
+  Day: n=1801 fan=0 share=0.000 [0.000, 0.002]
+  Night: n=1199 fan=268 share=0.224 [0.201, 0.248]
+  Fisher: p=3.53e-116
+  Sensitivity: rework label says 366 fan units, all night shift = True
+
+H4 OLS log(field cost) ~ fault + family + facility + supplier + rev + shift + region
+  R^2 = 0.898
+                     multiplier   mult_lo   mult_hi
+const                  1161.226  1085.505  1236.745
+fault_Fan Rotation        0.255     0.235     0.276
+fault_Leak                2.766     2.612     2.934
+fault_Power Wiring        0.184     0.174     0.194
+family_DC200              1.031     0.991     1.079
+family_DC300              0.992     0.953     1.033
+family_LegacyX            1.523     1.453     1.596
+facility_Facility 2       1.023     0.983     1.067
+facility_Facility 3       1.012     0.968     1.054
+facility_Facility 4       0.978     0.934     1.021
+supplier_Supplier B       0.990     0.954     1.028
+supplier_Supplier C       1.018     0.983     1.056
+rev_Rev B                 1.011     0.974     1.049
+rev_Rev C                 0.978     0.941     1.016
+shift_Night               1.058     1.025     1.092
+region_East               0.988     0.943     1.037
+region_Midwest            0.979     0.935     1.024
+region_South              0.985     0.938     1.036
+region_West               1.014     0.967     1.063
+  read: multiplier = cost relative to the baseline level (Controls, DC100, Facility 1, Sup A, Rev A, Day, Canada)
+
+Null checks (chi-square of reconciled fault vs variable)
+  fault vs region      : chi2=    9.7 dof= 12 p=0.641
+  fault vs eolt_station: chi2=    5.4 dof=  9 p=0.802
+  fault vs disposition : chi2=    3.5 dof=  3 p=0.326
+  fault vs month       : chi2=   39.4 dof= 36 p=0.320
+  fault vs family      : chi2=    8.2 dof=  9 p=0.517
+  field cost vs region      : Kruskal p=0.946
+  field cost vs disposition : Kruskal p=0.381
+  field cost vs eolt_station: Kruskal p=0.635
+  10+ tests run; findings H1-H3 have p < 1e-30, far past any Bonferroni cut
+
+Cost of each problem over the 12 months of field data
+              count      sum    mean
+fault                               
+Controls        283   392488  1387.0
+Fan Rotation    268   102827   384.0
+Leak            788  2892018  3670.0
+Power Wiring   1661   438688   264.0
+  LegacyX actual cost 956,386 vs cost at non-LegacyX prices 638,834 -> premium 317,552

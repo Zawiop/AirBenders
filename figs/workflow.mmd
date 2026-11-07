@@ -1,0 +1,11 @@
+%%{init: {'theme':'base','themeVariables':{'fontSize':'18px','primaryColor':'#e8f1fc','primaryBorderColor':'#2a78d6','primaryTextColor':'#0b0b0b','lineColor':'#52514e','background':'#fcfcfb'}}}%%
+flowchart LR
+  A["4 datasets<br/>3,000 serials<br/>Field, Config,<br/>Rework, EOLT"] --> B["Join on serial<br/>integrity checks<br/>100% key match"]
+  B --> C["Reconcile labels<br/>4 fault classes<br/>2-of-3 vote<br/>91% full agreement"]
+  C --> D["Inference<br/>Fisher, Wilson CIs<br/>log-cost OLS<br/>bootstrap CIs"]
+  C --> E["Models<br/>build-time features only<br/>train Jan-Sep, test Oct-Jan<br/>5-fold CV tuning"]
+  C --> F["Clustering<br/>72 build cells<br/>k-means + hierarchical"]
+  D --> G["Cost pools<br/>by root cause"]
+  E --> G
+  F --> G
+  G --> H["Portfolio<br/>178 combos under 750K<br/>stacked benefits + ramp<br/>Monte Carlo 2,000 runs"]

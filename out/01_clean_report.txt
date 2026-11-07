@@ -1,0 +1,54 @@
+rows 3000, unique serials 3000
+Product Family field==config: 1.000
+Facility config==rework: 1.000
+Facility config==eolt: 1.000
+Shift rework==eolt: 1.000
+
+units where all 3 sources agree: 0.911
+fault_field agrees with reconciled fault: 0.972
+fault_rework agrees with reconciled fault: 0.967
+fault_eolt agrees with reconciled fault: 0.971
+
+reconciled fault counts
+fault
+Power Wiring    1661
+Leak             788
+Controls         283
+Fan Rotation     268
+
+field label vs reconciled
+fault                    Controls  Fan Rotation  Leak  Power Wiring
+Failure Description                                                
+Communication Fault           143             0     0             0
+Condenser Fan Backwards         0           185     0             0
+Loose Power Wiring              0            83     0          1661
+Refrigerant Leak                0             0   250             0
+Sensor Fault                  140             0     0             0
+Service Valve Leak              0             0   270             0
+Suction Leak                    0             0   268             0
+
+EOLT label vs reconciled
+fault               Controls  Fan Rotation  Leak  Power Wiring
+Failure Mode                                                  
+Fan Rotation Error         0           181     0             0
+Loose Terminal             0            87     0          1661
+Refrigerant Leak           0             0   788             0
+Sensor Miswire           283             0     0             0
+
+rework label vs reconciled
+fault                    Controls  Fan Rotation  Leak  Power Wiring
+Repair Type                                                        
+Fan Rotation Correction         0           268     0            98
+Leak Repair                     0             0   788             0
+Rewire                          0             0     0          1563
+Sensor Rewire                 283             0     0             0
+
+EOLT station vs reconciled fault (station looks uninformative)
+fault            Controls  Fan Rotation  Leak  Power Wiring
+eolt_station                                               
+Controls Test          64            72   204           394
+Electrical Test        76            62   176           417
+Functional Test        70            69   202           436
+Leak Test              73            65   206           414
+
+service dates 2025-01-01 to 2026-01-01
