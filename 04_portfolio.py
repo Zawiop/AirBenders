@@ -152,6 +152,24 @@ for v, p in alt:
 pd.DataFrame([(v, " + ".join(CAT.loc[list(p), "name"])) for v, p in alt], columns=["net3", "names"]).to_csv(
     OUT / "p_scenario_detection_half.csv", index=False)
 
+# ---- Dashboard dependency: the Dashboard is credited with 15% of ALL field cost --------
+# (every unit in the data is a quality escape). It is also a detection tool, so test the
+# pick with its benefit cut, alone and together with the detection-half scenario above.
+DASH = [("Dashboard 50%", {4: 0.5}), ("Dashboard 0%", {4: 0.0}),
+        ("Dashboard 50% + Leak Detection/EOLT 50%", {4: 0.5, 7: 0.5, 8: 0.5})]
+dash_rows = []
+lines.append("\nscenario: Predictive Quality Dashboard benefit cut, top 3")
+for label, cut in DASH:
+    sc = {i: cut.get(i, 1.0) for i in CAT.index}
+    res = sorted(((evaluate(p, sc)["h"] - CAT.loc[list(p), "cost"].sum(), p) for p in P.port), reverse=True)[:3]
+    lines.append(f" {label}")
+    for v, p in res:
+        nm = " + ".join(CAT.loc[list(p), "name"])
+        lines.append(f"  {v:12,.0f}  {nm}  (${CAT.loc[list(p), 'cost'].sum():,})")
+        dash_rows.append((label, v, nm, CAT.loc[list(p), "cost"].sum()))
+pd.DataFrame(dash_rows, columns=["scenario", "net3", "names", "cost"]).to_csv(
+    OUT / "p_scenario_dashboard.csv", index=False)
+
 # ---- Monte Carlo: uncertain benefits and delays ------------------------------------
 rng = np.random.default_rng(7)
 SPREAD = {"Low": 0.25, "Medium": 0.40, "High": 0.60}

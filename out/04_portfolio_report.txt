@@ -42,6 +42,20 @@ scenario: Leak Detection and EOLT Station at 50% of catalog benefit, top 5
      3,744,117  Wiring Poka-Yoke + Predictive Quality Dashboard + Vision Inspection + Supplier Quality Program  ($725,000)
      3,734,710  Braze Process Training + Predictive Quality Dashboard + Vision Inspection + Supplier Quality Program  ($650,000)
 
+scenario: Predictive Quality Dashboard benefit cut, top 3
+ Dashboard 50%
+     4,359,724  Smart Torque Tools + Vision Inspection + Automated Leak Detection  ($725,000)
+     4,324,807  Smart Torque Tools + Wiring Poka-Yoke + Automated Leak Detection + Supplier Quality Program  ($750,000)
+     4,291,987  Wiring Poka-Yoke + Vision Inspection + Automated Leak Detection  ($750,000)
+ Dashboard 0%
+     4,359,724  Smart Torque Tools + Vision Inspection + Automated Leak Detection  ($725,000)
+     4,324,807  Smart Torque Tools + Wiring Poka-Yoke + Automated Leak Detection + Supplier Quality Program  ($750,000)
+     4,291,987  Wiring Poka-Yoke + Vision Inspection + Automated Leak Detection  ($750,000)
+ Dashboard 50% + Leak Detection/EOLT 50%
+     3,663,563  Braze Process Training + Smart Torque Tools + Wiring Poka-Yoke + Vision Inspection + Supplier Quality Program  ($725,000)
+     3,649,985  Braze Process Training + Smart Torque Tools + Predictive Quality Dashboard + Vision Inspection + Supplier Quality Program  ($750,000)
+     3,356,899  Braze Process Training + Smart Torque Tools + Wiring Poka-Yoke + Predictive Quality Dashboard + Vision Inspection  ($700,000)
+
 Monte Carlo (2000 draws; benefit scale triangular by risk, extra delay 0-3 months for Medium/High)
                                                                                                                     names  p_best   net3_mean     net3_p5    net3_p95  p_loss
                           Smart Torque Tools + Wiring Poka-Yoke + Predictive Quality Dashboard + Automated Leak Detection   0.805 4143487.532 3768231.227 4531623.844     0.0
@@ -50,8 +64,8 @@ Monte Carlo (2000 draws; benefit scale triangular by risk, extra delay 0-3 month
 Braze Process Training + Smart Torque Tools + Predictive Quality Dashboard + Vision Inspection + Supplier Quality Program   0.028 3632453.230 3201383.769 4062361.475     0.0
                                                           Wiring Poka-Yoke + Vision Inspection + Automated Leak Detection   0.015 3809044.973 3340279.474 4272222.691     0.0
                                                     Braze Process Training + Vision Inspection + Automated Leak Detection   0.002 3707173.429 3217435.595 4199438.629     0.0
-                    Braze Process Training + Smart Torque Tools + Predictive Quality Dashboard + Automated Leak Detection   0.000 3858038.074 3491676.727 4227496.142     0.0
-                                Braze Process Training + Smart Torque Tools + Wiring Poka-Yoke + Automated Leak Detection   0.000 3795677.933 3438209.411 4158973.143     0.0
+                                                   Braze Process Training + Smart Torque Tools + Automated Leak Detection   0.000 3162085.556 2819967.386 3507061.747     0.0
+                           Braze Process Training + Smart Torque Tools + Predictive Quality Dashboard + Vision Inspection   0.000 3097511.841 2696386.861 3502698.100     0.0
 
 sensitivity of the top portfolio choice
   labor $30/hr, benefits x1.0: best = Smart Torque Tools + Wiring Poka-Yoke + Predictive Quality Dashboard + Automated Leak Detection  net3 4,442,053
@@ -63,7 +77,7 @@ sensitivity of the top portfolio choice
   labor $70/hr, benefits x1.0: best = Smart Torque Tools + Wiring Poka-Yoke + Predictive Quality Dashboard + Automated Leak Detection  net3 4,859,995
   labor $70/hr, benefits x0.75: best = Smart Torque Tools + Wiring Poka-Yoke + Predictive Quality Dashboard + Automated Leak Detection  net3 3,558,219
   labor $70/hr, benefits x0.5: best = Smart Torque Tools + Wiring Poka-Yoke + Predictive Quality Dashboard + Automated Leak Detection  net3 2,193,461
-  flag top 20% of units by model leak risk -> 44.3% of leak cost captured (random: 20%)
-  flag top 30% of units by model leak risk -> 65.1% of leak cost captured (random: 30%)
-  flag top 40% of units by model leak risk -> 83.3% of leak cost captured (random: 40%)
+  flag top 20% of units by model leak risk -> 44.6% of leak cost captured (random: 20%)
+  flag top 30% of units by model leak risk -> 65.6% of leak cost captured (random: 30%)
+  flag top 40% of units by model leak risk -> 83.4% of leak cost captured (random: 40%)
   flag top 50% of units by model leak risk -> 100.0% of leak cost captured (random: 50%)

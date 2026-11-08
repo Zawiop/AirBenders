@@ -1,0 +1,10 @@
+scenario,net3,names,cost
+Dashboard 50%,4359723.893749998,Smart Torque Tools + Vision Inspection + Automated Leak Detection,725000
+Dashboard 50%,4324807.437500001,Smart Torque Tools + Wiring Poka-Yoke + Automated Leak Detection + Supplier Quality Program,750000
+Dashboard 50%,4291987.391666667,Wiring Poka-Yoke + Vision Inspection + Automated Leak Detection,750000
+Dashboard 0%,4359723.893749998,Smart Torque Tools + Vision Inspection + Automated Leak Detection,725000
+Dashboard 0%,4324807.437500001,Smart Torque Tools + Wiring Poka-Yoke + Automated Leak Detection + Supplier Quality Program,750000
+Dashboard 0%,4291987.391666667,Wiring Poka-Yoke + Vision Inspection + Automated Leak Detection,750000
+Dashboard 50% + Leak Detection/EOLT 50%,3663563.01041667,Braze Process Training + Smart Torque Tools + Wiring Poka-Yoke + Vision Inspection + Supplier Quality Program,725000
+Dashboard 50% + Leak Detection/EOLT 50%,3649984.965468752,Braze Process Training + Smart Torque Tools + Predictive Quality Dashboard + Vision Inspection + Supplier Quality Program,750000
+Dashboard 50% + Leak Detection/EOLT 50%,3356899.161041669,Braze Process Training + Smart Torque Tools + Wiring Poka-Yoke + Predictive Quality Dashboard + Vision Inspection,700000

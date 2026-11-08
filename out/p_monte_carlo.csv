@@ -5,37 +5,37 @@ Smart Torque Tools + Wiring Poka-Yoke + Automated Leak Detection + Supplier Qual
 Braze Process Training + Smart Torque Tools + Predictive Quality Dashboard + Vision Inspection + Supplier Quality Program,"(1, 2, 4, 6, 9)",0.028,3632453.2304299306,3201383.7693829453,4062361.4748378773,0.0
 Wiring Poka-Yoke + Vision Inspection + Automated Leak Detection,"(3, 6, 7)",0.015,3809044.972809635,3340279.4738881798,4272222.691352244,0.0
 Braze Process Training + Vision Inspection + Automated Leak Detection,"(1, 6, 7)",0.0015,3707173.4291357566,3217435.5949255843,4199438.628724622,0.0
-Braze Process Training + Smart Torque Tools + Predictive Quality Dashboard + Automated Leak Detection,"(1, 2, 4, 7)",0.0,3858038.0735376645,3491676.7265156005,4227496.1418041885,0.0
-Braze Process Training + Smart Torque Tools + Wiring Poka-Yoke + Automated Leak Detection,"(1, 2, 3, 7)",0.0,3795677.9333780347,3438209.4106948567,4158973.142672439,0.0
-Braze Process Training + Wiring Poka-Yoke + Predictive Quality Dashboard + Automated Leak Detection,"(1, 3, 4, 7)",0.0,3746161.0375507744,3389474.0964030535,4103234.9133082866,0.0
-Smart Torque Tools + Predictive Quality Dashboard + Automated Leak Detection,"(2, 4, 7)",0.0,3569605.5727743986,3188102.284455571,3949411.027276808,0.0
-Braze Process Training + Smart Torque Tools + Wiring Poka-Yoke + Predictive Quality Dashboard + Vision Inspection,"(1, 2, 3, 4, 6)",0.0,3474327.8694027425,3107134.090633415,3837757.3481950415,0.0
-Braze Process Training + Predictive Quality Dashboard + Automated Leak Detection + Supplier Quality Program,"(1, 4, 7, 9)",0.0,3500308.980404502,3145650.370319991,3845183.039495006,0.0
-Braze Process Training + Smart Torque Tools + Automated Leak Detection + Supplier Quality Program,"(1, 2, 7, 9)",0.0,3546904.32167797,3183611.2626553793,3876741.2682272694,0.0
-Vision Inspection + Automated Leak Detection,"(6, 7)",0.0,3390879.379679823,2891708.31740369,3878955.8854086297,0.0
-Wiring Poka-Yoke + Predictive Quality Dashboard + Automated Leak Detection,"(3, 4, 7)",0.0,3457728.536787509,3084212.5932295336,3821355.773450833,0.0
-Braze Process Training + Wiring Poka-Yoke + Automated Leak Detection + Supplier Quality Program,"(1, 3, 7, 9)",0.0,3474908.819862438,3122457.9548637383,3814590.0514206453,0.0
-Smart Torque Tools + Predictive Quality Dashboard + Vision Inspection + Supplier Quality Program,"(2, 4, 6, 9)",0.0,3283036.4161143927,2852366.934900359,3719544.9286935423,0.0
-Smart Torque Tools + Wiring Poka-Yoke + Automated Leak Detection,"(2, 3, 7)",0.0,3479383.883922101,3109180.1919172755,3857382.9535888284,0.0
-Wiring Poka-Yoke + Predictive Quality Dashboard + Vision Inspection + Supplier Quality Program,"(3, 4, 6, 9)",0.0,3189813.1249893885,2774061.9617729355,3622658.084111566,0.0
-Braze Process Training + Predictive Quality Dashboard + Vision Inspection + Supplier Quality Program,"(1, 4, 6, 9)",0.0,3162413.9110508864,2705397.480641161,3627102.999768252,0.0
-Braze Process Training + Smart Torque Tools + Wiring Poka-Yoke + Predictive Quality Dashboard + Supplier Quality Program,"(1, 2, 3, 4, 9)",0.0,3263667.3336659223,2954989.1667623282,3586861.001996885,0.0
-Braze Process Training + Smart Torque Tools + Wiring Poka-Yoke + Vision Inspection + Supplier Quality Program,"(1, 2, 3, 6, 9)",0.0,3209726.83903563,2846441.588264364,3566003.5334232375,0.0
-Predictive Quality Dashboard + Automated Leak Detection + Supplier Quality Program,"(4, 7, 9)",0.0,3241776.3263607426,2865679.2169439057,3601805.261595852,0.0
-Smart Torque Tools + Automated Leak Detection + Supplier Quality Program,"(2, 7, 9)",0.0,3263308.4836993637,2898091.860334464,3606620.961915447,0.0
-Braze Process Training + Predictive Quality Dashboard + Enhanced Design Validation + Automated Leak Detection,"(1, 4, 5, 7)",0.0,3192367.0395439137,2842754.541029362,3537657.6003715475,0.0
+Braze Process Training + Smart Torque Tools + Automated Leak Detection,"(1, 2, 7)",0.0,3162085.5559815643,2819967.3857912323,3507061.747298145,0.0
 Braze Process Training + Smart Torque Tools + Predictive Quality Dashboard + Vision Inspection,"(1, 2, 4, 6)",0.0,3097511.841148702,2696386.861491145,3502698.1003411333,0.0
 Wiring Poka-Yoke + Automated Leak Detection + Supplier Quality Program,"(3, 7, 9)",0.0,3191312.9818838313,2820039.306102783,3538570.9015063187,0.0
 Braze Process Training + Smart Torque Tools + Enhanced Design Validation + Automated Leak Detection,"(1, 2, 5, 7)",0.0,3213222.5140180932,2867367.2856431194,3558718.853632926,0.0
 Smart Torque Tools + Wiring Poka-Yoke + Predictive Quality Dashboard + Vision Inspection,"(2, 3, 4, 6)",0.0,3084822.3660131115,2724628.462983964,3448466.8163772384,0.0
 Braze Process Training + Predictive Quality Dashboard + Automated Leak Detection,"(1, 4, 7)",0.0,3172279.078208498,2821409.708715718,3522824.748818819,0.0
 Braze Process Training + Wiring Poka-Yoke + Predictive Quality Dashboard + Vision Inspection,"(1, 3, 4, 6)",0.0,3004288.550023698,2610088.8415566664,3402379.9729836094,0.0
-Braze Process Training + Smart Torque Tools + Automated Leak Detection,"(1, 2, 7)",0.0,3162085.5559815643,2819967.3857912323,3507061.747298145,0.0
-Braze Process Training + Wiring Poka-Yoke + Enhanced Design Validation + Automated Leak Detection,"(1, 3, 5, 7)",0.0,3079066.4417393142,2732665.360358291,3428889.690687028,0.0
 Braze Process Training + Wiring Poka-Yoke + Automated Leak Detection,"(1, 3, 7)",0.0,3090090.054166032,2742919.7407758366,3445606.7001283206,0.0
+Braze Process Training + Wiring Poka-Yoke + Enhanced Design Validation + Automated Leak Detection,"(1, 3, 5, 7)",0.0,3079066.4417393142,2732665.360358291,3428889.690687028,0.0
+Smart Torque Tools + Automated Leak Detection + Supplier Quality Program,"(2, 7, 9)",0.0,3263308.4836993637,2898091.860334464,3606620.961915447,0.0
 Predictive Quality Dashboard + Vision Inspection + Supplier Quality Program,"(4, 6, 9)",0.0,2812997.096735348,2355579.941414369,3285703.567823553,0.0
 Smart Torque Tools + Wiring Poka-Yoke + Predictive Quality Dashboard + Enhanced Design Validation + Supplier Quality Program,"(2, 3, 4, 5, 9)",0.0,2902538.3526581125,2587718.557377388,3227753.777495876,0.0
 Smart Torque Tools + Wiring Poka-Yoke + Predictive Quality Dashboard + Supplier Quality Program,"(2, 3, 4, 9)",0.0,2914250.5193503844,2592085.322094309,3240269.659081404,0.0
 Predictive Quality Dashboard + Enhanced Design Validation + Automated Leak Detection,"(4, 5, 7)",0.0,2906678.01374592,2552749.7328609494,3266550.1145937797,0.0
 Smart Torque Tools + Wiring Poka-Yoke + Vision Inspection + Supplier Quality Program,"(2, 3, 6, 9)",0.0,2821068.1860059416,2468307.7416867926,3185962.6614634516,0.0
+Braze Process Training + Predictive Quality Dashboard + Enhanced Design Validation + Automated Leak Detection,"(1, 4, 5, 7)",0.0,3192367.0395439137,2842754.541029362,3537657.6003715475,0.0
+Braze Process Training + Smart Torque Tools + Wiring Poka-Yoke + Predictive Quality Dashboard + Supplier Quality Program,"(1, 2, 3, 4, 9)",0.0,3263667.3336659223,2954989.1667623282,3586861.001996885,0.0
+Predictive Quality Dashboard + Automated Leak Detection + Supplier Quality Program,"(4, 7, 9)",0.0,3241776.3263607426,2865679.2169439057,3601805.261595852,0.0
+Braze Process Training + Smart Torque Tools + Automated Leak Detection + Supplier Quality Program,"(1, 2, 7, 9)",0.0,3546904.32167797,3183611.2626553793,3876741.2682272694,0.0
+Braze Process Training + Smart Torque Tools + Predictive Quality Dashboard + Automated Leak Detection,"(1, 2, 4, 7)",0.0,3858038.0735376645,3491676.7265156005,4227496.1418041885,0.0
+Braze Process Training + Smart Torque Tools + Wiring Poka-Yoke + Automated Leak Detection,"(1, 2, 3, 7)",0.0,3795677.9333780347,3438209.4106948567,4158973.142672439,0.0
+Braze Process Training + Wiring Poka-Yoke + Predictive Quality Dashboard + Automated Leak Detection,"(1, 3, 4, 7)",0.0,3746161.0375507744,3389474.0964030535,4103234.9133082866,0.0
+Smart Torque Tools + Predictive Quality Dashboard + Automated Leak Detection,"(2, 4, 7)",0.0,3569605.5727743986,3188102.284455571,3949411.027276808,0.0
+Braze Process Training + Smart Torque Tools + Wiring Poka-Yoke + Predictive Quality Dashboard + Vision Inspection,"(1, 2, 3, 4, 6)",0.0,3474327.8694027425,3107134.090633415,3837757.3481950415,0.0
+Braze Process Training + Predictive Quality Dashboard + Automated Leak Detection + Supplier Quality Program,"(1, 4, 7, 9)",0.0,3500308.980404502,3145650.370319991,3845183.039495006,0.0
+Vision Inspection + Automated Leak Detection,"(6, 7)",0.0,3390879.379679823,2891708.31740369,3878955.8854086297,0.0
+Braze Process Training + Smart Torque Tools + Wiring Poka-Yoke + Vision Inspection + Supplier Quality Program,"(1, 2, 3, 6, 9)",0.0,3209726.83903563,2846441.588264364,3566003.5334232375,0.0
+Wiring Poka-Yoke + Predictive Quality Dashboard + Automated Leak Detection,"(3, 4, 7)",0.0,3457728.536787509,3084212.5932295336,3821355.773450833,0.0
+Braze Process Training + Wiring Poka-Yoke + Automated Leak Detection + Supplier Quality Program,"(1, 3, 7, 9)",0.0,3474908.819862438,3122457.9548637383,3814590.0514206453,0.0
+Smart Torque Tools + Predictive Quality Dashboard + Vision Inspection + Supplier Quality Program,"(2, 4, 6, 9)",0.0,3283036.4161143927,2852366.934900359,3719544.9286935423,0.0
+Smart Torque Tools + Wiring Poka-Yoke + Automated Leak Detection,"(2, 3, 7)",0.0,3479383.883922101,3109180.1919172755,3857382.9535888284,0.0
+Wiring Poka-Yoke + Predictive Quality Dashboard + Vision Inspection + Supplier Quality Program,"(3, 4, 6, 9)",0.0,3189813.1249893885,2774061.9617729355,3622658.084111566,0.0
+Braze Process Training + Predictive Quality Dashboard + Vision Inspection + Supplier Quality Program,"(1, 4, 6, 9)",0.0,3162413.9110508864,2705397.480641161,3627102.999768252,0.0
 Braze Process Training + Smart Torque Tools + Vision Inspection + Supplier Quality Program,"(1, 2, 6, 9)",0.0,2791561.2459058175,2399269.2601664234,3194150.8113517044,0.0

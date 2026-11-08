@@ -28,7 +28,7 @@ The three sources name the same defect differently. We mapped each one to 4 faul
 - The two leak sources don't stack. Fac 2 + Sup B is 57%, and either one alone is 54 to 55% (p = 0.71). Fixing only one source leaves the 248 both-source units exposed.
 - Leak subtype (refrigerant, suction, service valve) mix is the same for both sources (p = 0.22), so subtype can't tell a braze leak from a coil leak.
 - Rev A is still about 30% of units every month, so the controls problem is ongoing.
-- Cost model, log(cost) OLS with bootstrap CIs (R² 0.90): LegacyX costs 1.52x [1.45, 1.60] for the same fault. That's a $318K a year premium. Region, facility, supplier, and revision have no effect on cost once fault is known.
+- Cost model, log(cost) OLS with bootstrap CIs (R² 0.90): LegacyX costs 1.52x [1.45, 1.60] for the same fault. That's a $318K a year premium. Region, facility, supplier, and revision have no effect on cost once fault is known. Night shift carries a small premium, 1.06x [1.02, 1.09].
 - Money: leaks are 26% of failures but $2.89M of the $3.83M field cost (76%).
 - Null results worth showing: region, product family, disposition code, and EOLT station don't predict fault type.
 
@@ -74,11 +74,14 @@ Unit = one serial. Features = what's known at shipment (family, facility, suppli
 Cost pools: field cost ($3.83M) plus rework (labor at an assumed $45/hr, plus material, plus EOLT rework hours, about $1.51M), for $5.34M a year in total. Each catalog item is mapped to the fault classes it targets. Benefits stack multiplicatively on each unit, and nothing saves money before its implementation time. We use a 3-year horizon with no discounting.
 
 - **Recommended: Smart Torque Tools + Wiring Poka-Yoke + Predictive Quality Dashboard + Automated Leak Detection = $725K.** Year-1 savings $1.04M, run rate $2.14M a year, 3-year net $4.60M (ROI 6.3x).
-- Monte Carlo (2,000 draws, benefit scale by risk level: Low ±25%, Medium ±40%, High ±60%, plus 0 to 3 month delays): this portfolio is best in 80% of draws, its 5th percentile is $3.77M, and it never loses money.
-- The pick doesn't change for labor at $30 to $70/hr or for every benefit cut to 50%.
+- Monte Carlo (2,000 draws, benefit scale by risk level: Low ±25%, Medium ±40%, High ±60%, plus 0 to 3 month delays): this portfolio is best in 80% of draws, its 5th percentile is $3.77M, and it never loses money. The draws compare the 40 best portfolios at catalog values.
+- The pick doesn't change for labor at $30 to $70/hr or for every benefit cut to 50%. A uniform cut barely changes the ranking, so this test is weak. The one-item tests below matter more.
+- **The pick depends on the Dashboard.** We apply its "15% reduction in quality escapes" to all field cost, because every unit in the data escaped. That is $574K a year, as much as the EOLT Station for a third of the price. At half that benefit the Dashboard drops out entirely, and the best portfolio becomes **Smart Torque Tools + Vision Inspection + Automated Leak Detection ($725K, 3-year net $4.36M)**. The Monte Carlo can't show this because the Medium-risk range never goes below 60% of catalog. Present the recommendation as conditional on the Dashboard, with Torque + Vision + Leak Detection as the fallback.
 - Braze Training has the best standalone ROI, but adding it would push us to $775K.
 - LegacyX Refresh (34% ROI) and Design Validation (72%) rank last. The 12-month lag kills Refresh's year 1.
-- **Key judgment call.** Every field leak unit had already failed EOLT as a leak and passed after repair. That suggests detection isn't the gap. If Leak Detection and the EOLT Station only deliver half their catalog benefit, the best portfolio flips to prevention: Braze + Torque + Dashboard + Vision + Supplier ($750K, 3-year net $4.21M). Torque and Dashboard are in both, so they're the safe core.
+- **Key judgment call.** Every field leak unit had already failed EOLT as a leak and passed after repair. That suggests detection isn't the gap. If Leak Detection and the EOLT Station only deliver half their catalog benefit, the best portfolio flips to prevention: Braze + Torque + Dashboard + Vision + Supplier ($750K, 3-year net $4.21M). The same argument applies to the Dashboard, which is also a detection tool. With the Dashboard also at half benefit, the best is Braze + Torque + Poka-Yoke + Vision + Supplier ($725K, 3-year net $3.66M).
+- **Safe core: Smart Torque Tools.** It is the only investment in the best portfolio under every scenario we ran (catalog values, labor rate, uniform cuts, detection at half, Dashboard at half or zero). Vision Inspection is in every best portfolio once the Dashboard is cut.
+- Controls is a Rev A problem, but EOLT and rework both log it as Sensor Miswire, so we credit Wiring Poka-Yoke against it. On the slide, frame it as a miswire that Rev A's design allows.
 - **Model-targeted inspection.** Ranking held-out units by model leak risk captures 100% of leak cost in the top 49% of units, and 65% in the top 30% (random would be 30%). That means a leak check only has to cover the Facility 2 line and incoming Supplier B coils.
 - **No-cost actions outside the catalog:** stop building Rev A (Rev B and C have zero controls failures), audit night-shift fan wiring, and open a Supplier B corrective action.
 
@@ -87,5 +90,5 @@ Cost pools: field cost ($3.83M) plus rework (labor at an assumed $45/hr, plus ma
 - `01_clean.py` join, checks, label vote, outputs `out/clean.csv`
 - `02_inference.py` hypothesis tests, cost model
 - `03_models.py` classifiers, cost regression, clustering
-- `04_portfolio.py` cost pools, 178 feasible portfolios, scenario, Monte Carlo, capture curve
+- `04_portfolio.py` cost pools, 178 feasible portfolios, detection and Dashboard scenarios, Monte Carlo, capture curve
 - `05_figs.py` slide charts in `figs/`
