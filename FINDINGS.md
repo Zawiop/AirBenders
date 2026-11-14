@@ -105,7 +105,9 @@ Cost pools: field cost ($3.83M) plus rework (labor at an assumed $45/hr, plus ma
 - Braze Training has the best standalone ROI, but adding it would push us to $775K.
 - LegacyX Refresh (34% ROI) and Design Validation (72%) rank last. The 12-month lag kills Refresh's year 1.
 - **Key judgment call.** Every field leak unit had already failed EOLT as a leak and passed after repair. That suggests detection isn't the gap. If Leak Detection and the EOLT Station only deliver half their catalog benefit, the best portfolio flips to prevention: Braze + Torque + Dashboard + Vision + Supplier ($750K, 3-year net $4.21M). The same argument applies to the Dashboard, which is also a detection tool. With the Dashboard also at half benefit, the best is Braze + Torque + Poka-Yoke + Vision + Supplier ($725K, 3-year net $3.66M).
-- **Safe core: Smart Torque Tools.** It is the only investment in the best portfolio under every scenario we ran (catalog values, labor rate, uniform cuts, detection at half, Dashboard at half or zero). Vision Inspection is in every best portfolio once the Dashboard is cut.
+- **Safe core: Smart Torque Tools.** It is the only investment in the best portfolio under every named scenario (catalog values, labor rate, uniform cuts, detection at half, Dashboard at half or zero), and it is in the winning portfolio in 98.4% of the 2,000 Monte Carlo draws, not all of them. Vision Inspection is in every best portfolio once the Dashboard is cut.
+- **Leak Detection survives the simulation (in 97% of winning draws); our doubt comes from the data.** All 788 leak units failed EOLT as a refrigerant leak, were repaired, passed retest, and then leaked in the field. That points at repair or retest quality more than missing detection, which is why we pilot it rather than buy it outright.
+- Power wiring has no build driver. Its share of failures drops only where another fault takes over (for example 35% at Facility 2 vs 60 to 65% elsewhere), so the three conditions explain the other three faults, not wiring.
 - Controls is a Rev A problem, but EOLT and rework both log it as Sensor Miswire, so we credit Wiring Poka-Yoke against it. On the slide, frame it as a miswire that Rev A's design allows.
 - **Model-targeted inspection.** Ranking held-out units by model leak risk captures 100% of leak cost in the top 49% of units, and 65% in the top 30% (random would be 30%). That means a leak check only has to cover the Facility 2 line and incoming Supplier B coils.
 - **No-cost actions outside the catalog:** stop building Rev A (Rev B and C have zero controls failures), audit night-shift fan wiring, and open a Supplier B corrective action.
@@ -114,7 +116,7 @@ Cost pools: field cost ($3.83M) plus rework (labor at an assumed $45/hr, plus ma
 
 Because the catalog-value pick depends on two uncertain items (the Dashboard and Leak Detection), we recommend staging the spend:
 
-- **Approve now, $100K: Smart Torque Tools.** It is in the best portfolio under every scenario we ran and is live in 3 months.
+- **Approve now, $100K: Smart Torque Tools.** It is in the best portfolio under every named scenario and in 98% of simulated ones, and is live in 3 months.
 - **Pilot, then fund, $625K.** Buy Automated Leak Detection ($350K) only if a trial on Facility 2 and Supplier B units finds leaks that EOLT misses; otherwise put that money into prevention (Braze Training + Supplier Quality Program). Choose Dashboard + Poka-Yoke ($275K) or Vision Inspection ($275K) after a 3-month Dashboard pilot, on escapes per 1,000 units.
 - **Free:** stop Rev A, audit night-shift fan wiring, open a Supplier B corrective action.
 - **Measure monthly against today's baselines:** leak share at Facility 2 or Supplier B (55%), controls share on Rev A (31.7%), fan share on night shift (22.4%), field cost per failure ($1,275).
