@@ -2,7 +2,7 @@
 
 Our entry for the Airedale Applied Intelligence Challenge, Data Science track. We took one year of field service, rework and end-of-line test (EOLT) records for 3,000 failed units, worked out which build conditions go with which fault, predicted fault and repair cost at shipment on months the models never saw, and used those predictions to choose investments within a $750K budget.
 
-![Slide 8: three yes/no flags predict as well as any model](deck/preview.png)
+![Slide 8: three simple flags work as well as any model](deck/preview.png)
 
 ## What we found
 
