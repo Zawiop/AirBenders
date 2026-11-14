@@ -137,7 +137,7 @@ Because the catalog-value pick depends on two uncertain items (the Dashboard and
 
 ## Presentation
 
-The deck is a Claude artifact, "Airedale Field Failure Analysis". It has 14 main slides with no animations, a talk track in the speaker notes of about 6.5 minutes (922 words), and 3 backup slides.
+The deck is in `deck/AirBenders_deck.pdf`: 14 main slides for the 7-minute talk and 3 backup slides. The talk track (about 6.5 minutes, split across five speakers) lives in the speaker notes of the Google Slides version.
 
 ## Files
 
@@ -147,3 +147,4 @@ The deck is a Claude artifact, "Airedale Field Failure Analysis". It has 14 main
 - `04_portfolio.py` cost pools, 178 feasible portfolios, detection and Dashboard scenarios, Monte Carlo, failures avoided, capture curve
 - `05_figs.py` slide charts in `figs/`
 - `06_rule_check.py` three-flag rule model, bootstrap CIs, in-sample bound, leak calibration
+- `deck/` the final slide deck as a PDF
