@@ -208,6 +208,29 @@ for lab in [30, 45, 70]:
 POOLS[:, 2] = cells.rework.values
 base_annual = POOLS.sum()
 
+# ---- field failures avoided per year (estimate) ------------------------------------
+# Apply each item's field-side reduction to the failure COUNT in each cell instead of
+# its cost. The catalog states some benefits as cost reductions, not defect
+# reductions, so this is an approximation.
+def failures_avoided(port):
+    by = {}
+    for c, e in zip(cells.itertuples(), EFF):
+        m = 1.0
+        for i in port:
+            if i in e:
+                m *= 1 - min(e[i][0], 0.95)
+        by[c.fault] = by.get(c.fault, 0.0) + c.n * (1 - m)
+    return by
+
+fa_rows = []
+lines.append("\nfield failures avoided per year at steady state (estimate: catalog reductions applied to counts)")
+for label, port in [("recommended", best), ("Dashboard-half fallback", (2, 6, 7))]:
+    by = failures_avoided(port)
+    tot = sum(by.values())
+    lines.append(f"  {label}: {tot:,.0f} of {len(d):,}  " + ", ".join(f"{k} {v:,.0f}" for k, v in sorted(by.items())))
+    fa_rows.append(dict(portfolio=label, names=" + ".join(CAT.loc[list(port), "name"]), total=tot, **by))
+pd.DataFrame(fa_rows).to_csv(OUT / "p_failures_avoided.csv", index=False)
+
 # ---- model-informed targeting: leak risk score on the held-out window -------------
 t = pd.read_csv(OUT / "q1_test_predictions.csv").sort_values("p_leak", ascending=False)
 t["is_leak"] = t.fault.eq("Leak")

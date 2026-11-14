@@ -77,6 +77,10 @@ sensitivity of the top portfolio choice
   labor $70/hr, benefits x1.0: best = Smart Torque Tools + Wiring Poka-Yoke + Predictive Quality Dashboard + Automated Leak Detection  net3 4,859,995
   labor $70/hr, benefits x0.75: best = Smart Torque Tools + Wiring Poka-Yoke + Predictive Quality Dashboard + Automated Leak Detection  net3 3,558,219
   labor $70/hr, benefits x0.5: best = Smart Torque Tools + Wiring Poka-Yoke + Predictive Quality Dashboard + Automated Leak Detection  net3 2,193,461
+
+field failures avoided per year at steady state (estimate: catalog reductions applied to counts)
+  recommended: 1,117 of 3,000  Controls 139, Fan Rotation 131, Leak 386, Power Wiring 461
+  Dashboard-half fallback: 1,251 of 3,000  Controls 99, Fan Rotation 94, Leak 315, Power Wiring 743
   flag top 20% of units by model leak risk -> 44.6% of leak cost captured (random: 20%)
   flag top 30% of units by model leak risk -> 65.6% of leak cost captured (random: 30%)
   flag top 40% of units by model leak risk -> 83.4% of leak cost captured (random: 40%)
