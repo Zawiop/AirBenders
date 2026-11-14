@@ -66,7 +66,11 @@ Unit = one serial. Features = what's known at shipment (family, facility, suppli
 - Log loss is the main metric because the decisions rank units by probability. Accuracy rewards always guessing power wiring (56%).
 - **Caveat on model selection.** `03_models.py` names the "best" model (the depth-4 tree) by test log loss, which is selection on the test set. The tree and gradient boosting differ by 0.004, so no downstream result depends on the pick. The leak scores, AUCs and permutation importance below all come from the tree.
 - One-vs-rest AUC: Controls 0.93, Fan 0.89, Leak 0.86, Power Wiring 0.81.
-- The best possible lookup table (each build cell's own fault mix) gets 0.665. The models match that ceiling, so the remaining error is irreducible from these features.
+- **Three flags are the whole signal.** An 8-cell model built only from "Facility 2 or Supplier B?", "Rev A?" and "night shift?", fit on the training months, scores 0.632 (skill 42.3%, 95% CI 39.6 to 45.1%), accuracy 0.666, leak AUC 0.85. It ties the tree. All three rules hold in the training months alone with zero exceptions, so the flags are not learned from the test window. Because a pre-set model ties the best fitted one, the test-set model pick changes nothing. See `06_rule_check.py` and `out/06_rule_check_report.txt`.
+- Correction to an earlier claim: the 72-cell lookup fit on training data (0.665) is not a ceiling. The tree beats it because it pools cells that behave alike. An optimistic in-sample bound (each test cell's own mix, fit on the test set) is 0.550.
+- Bootstrap 95% CIs on the test window: classifier skill 42.2% [39.3, 45.2]; two-stage cost MAE reduction vs the training mean 33.3% [29.2, 37.7].
+- Leak probabilities are reasonably calibrated: units scored about 0.56 leak at 55%; units scored 0 never leak.
+- Capture-curve shares are among failed units only. What transfers to the plant is the rule (Facility 2 and Supplier B), not the 30% figure.
 - Permutation importance: supplier > facility > revision > shift. Region and family add nothing.
 - Be honest about accuracy. Controls and fan are never the single most likely class in any cell (max 32 to 38%), so argmax never predicts them. Use the probabilities, not hard labels.
 
@@ -140,3 +144,4 @@ The deck is a Claude artifact, "Airedale Field Failure Analysis". It has 14 main
 - `03_models.py` classifiers, cost regression, clustering
 - `04_portfolio.py` cost pools, 178 feasible portfolios, detection and Dashboard scenarios, Monte Carlo, failures avoided, capture curve
 - `05_figs.py` slide charts in `figs/`
+- `06_rule_check.py` three-flag rule model, bootstrap CIs, in-sample bound, leak calibration
